@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Control Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        .success {
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Validation Example</h1>
+    <form id="userForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <button type="button" onclick="validateForm()">Submit</button>
+        <p id="message"></p>
+    </form>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message");
+
+            // Clear previous messages
+            message.innerHTML = "";
+
+            // Validation logic
+            if (name === "") {
+                message.innerHTML = "Name is required.";
+                return;
+            }
+
+            if (email === "") {
+                message.innerHTML = "Email is required.";
+                return;
+            }
+
+            // Email format validation using a regular expression
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                message.innerHTML = "Please enter a valid email address.";
+                return;
+            }
+
+            // Success message
+            message.innerHTML = "Form submitted successfully!";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops and Conditions in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Loops and Conditions Example</h1>
+    <p>Click the button to see how loops and conditions work:</p>
+    <button onclick="showResults()">Run Script</button>
+    
+    <div class="output" id="output"></div>
+
+    <script>
+        function showResults() {
+            let outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = ""; // Clear previous output
+            
+            // Example of a loop (for loop)
+            outputDiv.innerHTML += "<h3>For Loop:</h3>";
+            for (let i = 1; i <= 5; i++) {
+                outputDiv.innerHTML += "Number: " + i + "<br>";
+            }
+
+            // Example of a conditional statement (if-else)
+            outputDiv.innerHTML += "<h3>If-Else Condition:</h3>";
+            let number = 5;
+            if (number % 2 === 0) {
+                outputDiv.innerHTML += number + " is even.<br>";
+            } else {
+                outputDiv.innerHTML += number + " is odd.<br>";
+            }
+
+            // Example of a loop with a condition (while loop)
+            outputDiv.innerHTML += "<h3>While Loop:</h3>";
+            let counter = 0;
+            while (counter < 3) {
+                outputDiv.innerHTML += "Counter: " + counter + "<br>";
+                counter++;
+            }
+        }
+    </script>
+</body>
+</html>
