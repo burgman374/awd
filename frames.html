@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            height: 20%;
+        }
+        #container {
+            display: flex;
+            height: 80%;
+        }
+        #menu {
+            width: 25%;
+            background-color: #f4f4f4;
+            padding: 10px;
+            box-shadow: inset -1px 0 0 #ddd;
+        }
+        #content {
+            width: 75%;
+            padding: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Header Section</h1>
+    </div>
+    <div id="container">
+        <div id="menu">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="https://www.google.com" target="_blank">Google</a></li>
+                <li><a href="https://www.wikipedia.org" target="_blank">Wikipedia</a></li>
+                <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <h3>Welcome</h3>
+            <p>This is the main content area. You can add more information here.</p>
+        </div>
+    </div>
+</body>
+</html>
